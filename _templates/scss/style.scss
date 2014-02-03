@@ -1,0 +1,20 @@
+$text: #9aa1a9;
+$main: #59a3fc;
+$second: #5da4fc;
+$light: #dddddd;
+
+
+// @import 'bourbon/bourbon'; FIRST NEED TO ADD BOURBON FOLDER TO scss FOLDER
+
+
+@import "palm";
+ 
+@media only screen and (min-width: 45.313em)
+{
+       @import "lap";
+}
+ 
+@media only screen and (min-width: 63.75em)
+{
+       @import "desk";
+}

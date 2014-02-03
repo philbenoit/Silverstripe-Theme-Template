@@ -1,0 +1,419 @@
+
+@import 'reset';
+
+/* ---------------------------------------- Site ---------------------------------------- */
+/*
+Base styles for the site, this section will usually only include the html and body selectors
+*/
+    * {
+        -webkit-box-sizing: border-box;
+           -moz-box-sizing: border-box;
+                box-sizing: border-box;
+    }
+    html {
+        height: 100%;
+        overflow-y: scroll;
+    }
+    body {
+        background: url(../img/bg.gif);
+        color: $text;
+        font-family: $helvetica;
+        line-height: 1.3em;
+        height: 100%;
+    }
+
+/* ---------------------------------------- Base ---------------------------------------- */
+/*
+This section generally sets out the basic styles for the page.
+Headings, lists, anchors etc are specificed here
+*/
+
+    /* -------------------- Headings */
+    h1, .h1 {
+        color:$main;
+        font-family: Calibri, Arial, Helvetica, sans-serif;
+        font-size: em(50); /* 30px */
+        line-height: 1.067; /* 32px */
+        margin-bottom: 18px;
+    }
+    h2, .h2 {
+        font-size: em(24); /* 16px */
+        font-weight:bold;
+        line-height: 1.5; /* 24px */
+        margin-bottom: 8px;
+    }
+    h3, .h3 {
+        font-size: em(18); /* 16px */
+        line-height: 1.5; /* 24px */
+        margin-bottom: 8px;
+    }
+    h4, .h4 {
+    }
+    h5, .h5 {
+    }
+    h6, .h6 {
+    }
+
+    /* -------------------- Paragraph */
+    p, .p {
+        font-size: 0.875em; /* 14px */
+        margin-bottom: 18px;
+    }
+
+    /* -------------------- Links */
+    a {
+        color: #0082c8;
+        text-decoration: none;
+    }
+    a:hover, a:focus {
+        text-decoration: underline;
+    }
+
+    /* -------------------- List */
+    ul, ol {
+        font-size: 0.875em; /* 14px */
+        margin-bottom: 18px;
+        zoom: 1;
+    }
+    ul {
+        list-style:none;
+    }
+    ul li {
+        margin-bottom: 12px;
+        padding: 0 0 0 12px;
+        zoom: 1;
+    }
+    ol li {
+        margin-bottom: 12px;
+        margin-left: 25px;
+    }
+    li > ul, li > ol {
+        font-size: 1em;
+        margin-top: 12px;
+        margin-bottom: 0;
+    }
+    ol li ul li {
+        margin-left: 0;
+    }
+    ul li ol li {
+        padding: 0;
+        background: none;
+    }
+    /*
+    Reset for nested list font sizes
+    */
+    .font_reset {
+        font-size:1em;
+    }
+    /* ---------- List reset */
+    .list_reset
+    {
+        list-style:none;
+        margin:0 0 13px 0;
+        padding:0;
+    }
+    .list_reset li
+    {
+        background:none;
+        margin:0;
+        padding:0;
+    }
+
+    /* -------------------- Table */
+    table {
+        width: 100%;
+        font-size: 0.75em; /* 12px */
+        margin-bottom: 15px;
+    }
+    table tr td {
+        padding: 7px 10px 6px 0;
+        border-bottom: 1px solid #eeeae1;
+    }
+    table tr td.width_1 {
+        width: 88px;
+    }
+
+    /* -------------------- Form */
+    form {
+        position: relative;
+        zoom: 1;
+    }
+
+    /* -------------------- Blockquote */
+    blockquote {
+    }
+
+
+/*--------------------------------------------------=> The Grid */
+/*
+As this is the palm version everything is 100% width
+*/
+
+    .wrapper {
+        width: 100%;
+        min-width: 100%;
+        padding: 0 10px;
+    }
+    .row:before, .row:after {
+        display: table;
+        content: "";
+        line-height: 0;
+    }
+    .row:after {
+        clear: both;
+    }
+
+    [class*="col_"] {
+        width: auto;
+        float: none;
+    }
+    [class*="palm_"]{
+        float: left;
+    }
+    .palm_1_3{
+        width: 33.33%;
+    }
+    .palm_1_2{
+        width: 50%;
+    }
+    .palm_2_3{
+        width: 66.66%;
+    }
+
+
+/* ---------------------------------------- Header ---------------------------------------- */
+
+    /* -------------------- Header */
+    .header {
+        background:#ffffff;
+        border-top:4px solid $main;
+        position: relative;
+        margin: 0 0 10px 0;
+        padding: 0;
+    }
+
+
+    /* ---------- Logo */
+    .logo {
+        margin: 20px 0;
+    }
+
+    /* ---------- Search */
+    .site_search {
+        margin: 20px 0;
+    }
+
+
+/* ---------------------------------------- Navigation ---------------------------------------- */
+/*
+All navigation elemets are listed here. This includes header, left, right and 
+footer navigation as well as any other basic navigation blocks that might
+appear.
+*/
+
+    /* -------------------- Primary nav */
+    .nav_pri {
+        float: left;
+        margin: 0;
+        overflow: hidden;
+    }
+    .nav_pri > li {
+        float: left;
+        margin:0;
+        padding: 0;
+    }
+    .nav_pri > li > a {
+        display: block;
+        padding:20px 10px;
+
+        &:hover{
+            background:$main;
+            color:#ffffff;
+            text-decoration: none;
+        }
+    }
+    .nav_pri .current {
+    }
+
+    /* ---------- Primary nav dropdown */
+    .container_dropdown {
+        display: none;
+    }
+
+    /* -------------------- Second level nav */
+    .nav_sec {
+    }
+    .nav_sec li ul {
+    }
+    .nav_sec li ul li {
+    }
+    .nav_sec .current {
+    }
+
+    /* -------------------- Support nav */
+    /*
+    Used for any supporting link lists that are not part of the main site map
+    */
+    .nav_sup {
+    }
+    .nav_sup li {
+    }
+    .nav_sup .current {
+    }
+
+
+
+/* ---------------------------------------- Site layout ---------------------------------------- */
+/*
+Main parent wrappers to contain all site elements, and define sticky footer styles if required
+*/
+    .container {
+    }
+    .main_content {
+        margin-bottom:-200px;
+        min-height: 100%;
+    }
+    .main_content:after {
+        content: "";
+        display: block;
+        height: 100px;
+    }
+    .push {
+    }
+
+    /*
+    Used in the same context as HTML5 <section> tag
+    */
+    .section {
+    }
+
+
+/* ---------------------------------------- Footer ---------------------------------------- */
+    .footer {
+        background: #ffffff;
+        border-bottom: 4px solid $main;
+        height:200px;
+        margin-top: 40px;
+    }
+
+/* ---------------------------------------- Heroes ---------------------------------------- */
+    .hero {
+    }
+
+/* ---------------------------------------- Lists ---------------------------------------- */
+/* 
+Prefix all list classes with 'list_' for consistency.
+*/
+    .list_links {
+    }
+
+/* ---------------------------------------- Links/Buttons ---------------------------------------- */
+/* 
+Prefix all class names with 'btn_'
+*/
+    .btn {
+        @include button(simple, $main);
+    }
+
+/* ---------------------------------------- Videos ---------------------------------------- */
+
+/* ---------------------------------------- Forms ---------------------------------------- */
+
+/* ---------------------------------------- Tables ---------------------------------------- */
+
+/* ---------------------------------------- Modules ---------------------------------------- */
+    .mod {
+        position: relative;
+    }
+
+/* ---------------------------------------- Media block ---------------------------------------- */
+    .media,
+    .media .med_bd {
+        overflow: hidden;
+        zoom: 1;
+    }
+    .media .med_l {
+        float: left;
+        margin:0 20px 20px 0;
+    }
+    .media .med_r {
+        float: right;
+        margin:0 0 20px 20px;
+    }
+
+/* ---------------------------------------- OOCSS ---------------------------------------- */
+/*
+Reusable classes to be applied as modifiers to existing DOM elements
+to reduce the amount of repetition in style declarations
+*/
+
+    /* -------------------- Text size */
+    .feature {
+        font-size: 1.313em; /* 21px */
+        line-height: 1.238; /* 26px */
+    }
+    .secondary {
+        font-family: Calibri, Arial, Helvetica, sans-serif;
+    }
+    .tertiary {
+        font-size: 0.625em; /* 10px */
+        line-height: 1.4; /* 14px */
+    }
+
+    /* -------------------- Color */
+    .highlight {
+        color: #7b9f17;
+    }
+    .contrast {
+        color: #7b2a84;
+    }
+    .light {
+        color: #eeeae1;
+    }
+    .dark {
+        color: #000;
+    }
+    .reverse {
+        color: #fff;
+    }
+
+    /* -------------------- Background */
+    .bg_light {
+        background-color: #eeeae1;
+    }
+    .bg_reverse {
+        background-color: #fff;
+    }
+
+    /* -------------------- Borders */
+    .border_b {
+        border-bottom: 1px solid #666;
+    }
+    .border_t {
+        border-top: 1px solid #666;
+    }
+    .shadow {
+        -webkit-box-shadow: 0 0 5px 3px rgba(0,0,0,0.1);
+           -moz-box-shadow: 0 0 5px 3px rgba(0,0,0,0.1);
+                box-shadow: 0 0 5px 3px rgba(0,0,0,0.1);
+    }
+
+    /* -------------------- Transitions */
+    /*
+    Use as OOCSS class or add any additional selectors to each declaration
+    */
+    .trans_bg,
+    [class*="btn"] {
+        -webkit-transition: background-color 0.2s ease-out;
+           -moz-transition: background-color 0.2s ease-out;
+             -o-transition: background-color 0.2s ease-out;
+                transition: background-color 0.2s ease-out;
+    }
+    .trans_color {
+        -webkit-transition: color 0.2s ease-out;
+           -moz-transition: color 0.2s ease-out;
+             -o-transition: color 0.2s ease-out;
+                transition: color 0.2s ease-out;
+    }
+
+@import 'utility';

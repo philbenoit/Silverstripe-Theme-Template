@@ -1,0 +1,75 @@
+/*--------------------------------------------------=> Reset */
+/*
+Standard browser resets for Skele
+*/
+/* ------------ General */
+	html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, menu, nav, section, time, mark, audio, video, details, summary {
+		background: transparent;
+		border: 0;
+		font-size: 100%;
+		margin: 0;
+		padding: 0;
+		vertical-align: baseline;
+	}
+	article, aside, figure, footer, header, nav, section, details, summary {display: block;}
+/* ------------ Typography */
+	h1, h2, h3, h4 {
+		font-weight: normal;
+	}
+	small {
+		font-size: 80%;
+	}
+	strong {
+		font-weight: bold;
+	}
+	sub, sup {
+		font-size: 75%;
+		line-height: 0;
+		position: relative;
+		vertical-align: baseline;
+	}
+	sup {
+		top: -0.5em;
+	}
+	sub {
+		bottom: -0.25em;
+	}
+/* ------------ Images */
+	/* Responsive images and other embedded objects
+	   Note: keeping IMG here will cause problems if you're using foreground images as sprites.
+	   If this default setting for images is causing issues, you might want to replace it with a .responsive class instead. */
+	img,
+	object,
+	embed {
+		border: 0;
+		height: auto;
+		max-width: 100%;
+		vertical-align: middle;
+	}
+/* ------------ Tables */
+	table {
+		border-collapse: collapse;
+		border-spacing: 0;
+		text-align: left;
+	}
+	td, th {
+		text-align: inherit;
+	}
+	td img {
+		vertical-align: top;
+	}
+/* ------------ Forms */
+	/* tables still need cellspacing="0" in the markup */
+	table {border-collapse: collapse; border-spacing: 0;}
+	th {font-weight: bold; vertical-align: bottom;}
+	td {font-weight: normal; vertical-align: top;}
+	input, select {vertical-align: middle;}
+	input[type="radio"] {vertical-align: text-bottom;}
+	input[type="checkbox"] {vertical-align: bottom;}
+	select, input, textarea {font: 99% sans-serif;}
+/* ------------ Misc */
+	ul {list-style: none;}
+	/* Webkit browsers add a 2px margin outside the chrome of form elements */
+	button, input, select, textarea {margin: 0;}
+	/* make buttons play nice in IE */
+	button {width: auto; overflow: visible;}
