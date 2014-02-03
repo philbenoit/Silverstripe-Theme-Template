@@ -14,6 +14,7 @@ The package contains a basic start to a page, along with scss files for a respon
 ### Setup
 
 1. Copy them into the root of your project.
+2. Navigate to '_tempaltes' and run 'npm install'
 2. Navigate to '_templates' and run 'grunt watch'
 3. Start working. 
 
