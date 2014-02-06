@@ -1,13 +1,14 @@
 module.exports = function(grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
+        SilverstripeTheme: 'startTheme',
         banner:
         '/*! <%= pkg.title || pkg.name %> - v<%= pkg.version %> - <%= grunt.template.today("dddd, mmmm dS, yyyy, h:MM:ss TT") %>\n' +
         ' * Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.author %>\n */\n',
         sass: {
             dist: {
                 files: {
-                    '../themes/MyNewTheme/css/style.css': 'scss/style.scss'
+                    '../themes/<%= SilverstripeTheme %>/css/style.css': 'scss/style.scss'
                 }
             }
         },
@@ -18,11 +19,11 @@ module.exports = function(grunt) {
             },
             vendor: {
                 src: ['scripts/vendor/*.js'],
-                dest: '../themes/MyNewTheme/scripts/vendor.min.js',
+                dest: '../themes/<%= SilverstripeTheme %>/scripts/vendor.min.js',
             },
             custom:{
                 src: ['scripts/common/*.js'],
-                dest: '../themes/MyNewTheme/scripts/datenight.js',
+                dest: '../themes/<%= SilverstripeTheme %>/scripts/<%= SilverstripeTheme %>.js',
             }
         },
         cssmin: {
@@ -31,7 +32,7 @@ module.exports = function(grunt) {
                     banner: '<%= banner %>'
                 },
                 files: {
-                    '../themes/MyNewTheme/css/style.css': ['../themes/MyNewTheme/css/style.css']
+                    '../themes/<%= SilverstripeTheme %>/css/style.css': ['../themes/<%= SilverstripeTheme %>/css/style.css']
                 }
             }
         },
@@ -42,7 +43,7 @@ module.exports = function(grunt) {
             },
             dist: {
                 files: {
-                    '../themes/MyNewTheme/scripts/datenight.min.js' : ['../themes/MyNewTheme/scripts/datenight.js']
+                    '../themes/<%= SilverstripeTheme %>/scripts/<%= SilverstripeTheme %>.min.js' : ['../themes/<%= SilverstripeTheme %>/scripts/<%= SilverstripeTheme %>.js']
                 }
             }
         },
@@ -59,7 +60,7 @@ module.exports = function(grunt) {
             }
         },
         watch: {
-            files: ['scss/*.scss', 'scripts/custom/custom.js', 'scripts/vendor/*.js', '../themes/MyNewTheme/templates/**/*'],
+            files: ['scss/*.scss', 'scripts/custom/custom.js', 'scripts/vendor/*.js', '../themes/<%= SilverstripeTheme %>/templates/**/*', '../mysite/code/**/*'],
             tasks: ['jshint', 'sass', 'concat', 'uglify', 'cssmin'],
             options: {
             // Start a live reload server on the default port 35729
