@@ -1,10 +1,10 @@
 {
-  "name": "DateNightSA",
+  "name": "SilverTest",
   "version": "0.1.0",
-  "description": "Date Night SA website - the best dates in South Africa",
+  "description": "SilverTEst",
   "repository": {
     "type": "git",
-    "url": "https://pbenoit@bitbucket.org/pbenoit/datenightsa.git"
+    "url": ""
   },
   "author": "Phil Benoit",
   "license": "BSD",
